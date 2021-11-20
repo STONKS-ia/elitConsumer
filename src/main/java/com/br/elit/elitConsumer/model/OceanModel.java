@@ -6,13 +6,13 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name="Ocean")
 public class OceanModel {
-    private long idOcean;
+    private int idOcean;
     private String nameOcean;
 
     public OceanModel() {
     }
 
-    public OceanModel(long idOcean, String nameOcean) {
+    public OceanModel(int idOcean, String nameOcean) {
         this.idOcean = idOcean;
         this.nameOcean = nameOcean;
     }
@@ -20,11 +20,11 @@ public class OceanModel {
     @Id
     @Column(name = "ID_OCEAN")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "OCEAN_SEQ")
-    public long getIdOcean() {
+    public int getIdOcean() {
         return idOcean;
     }
 
-    public void setIdOcean(long idOcean) {
+    public void setIdOcean(int idOcean) {
         this.idOcean = idOcean;
     }
 
